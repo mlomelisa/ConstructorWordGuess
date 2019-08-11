@@ -38,6 +38,10 @@ inquirer.prompt([
     if(randomWordArray.includes(newLetter)){
      
       testWord.eachLetterFunc(newLetter)
+     
+    // this.testWord = new word(randomWordArray);
+     testWord.convertstoString();
+    
       
     } else {
       guesstries--;
