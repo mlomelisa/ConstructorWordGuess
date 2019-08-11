@@ -2,11 +2,16 @@ var inquirer = require('inquirer');
 var word = require('./word');
 var words = require('./words')
 var newLetterArray = [];
+var randomWordArray = [];
+var guesstries = 10;
 
 //Function select a random word
 var wordRandomFunc = function() {
   var randomWord = words[Math.floor(Math.random() * words.length)];
-  var testWord = new word(randomWord);
+  randomWordArray  = randomWord.split(''); // convert to array the random word to guess
+  console.log(randomWord)
+  this.testWord = new word(randomWordArray);
+  
   testWord.convertstoString();
   askEntryFunction();
 }
@@ -30,7 +35,15 @@ inquirer.prompt([
     askEntryFunction();
   } else {
     newLetterArray.push(newLetter);
-   console.log('ok')
+    if(randomWordArray.includes(newLetter)){
+     
+      testWord.eachLetterFunc(newLetter)
+      
+    } else {
+      guesstries--;
+      console.log("You have " + guesstries + " guess tries")
+    }
+
    askEntryFunction();
   }
   
