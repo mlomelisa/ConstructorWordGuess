@@ -31,7 +31,8 @@ var word = function(randomWordArray){
     
       }
     }
-     console.log(this.currentWordArray)
+    //  console.log(this.currentWordArray)
+     console.log(this.currentWordArray.join(" "))
   }
 }
 
