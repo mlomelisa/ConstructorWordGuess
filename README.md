@@ -15,4 +15,4 @@ Application is constructed by three modules (letter.js, word.js and index.js)
 https://github.com/mlomelisa/ConstructorWordGuess
 
 ### Video
-https://drive.google.com/file/d/1ScrbWJqWM20NEmpgJ5qxgHPQfLU_RepX/view
+https://drive.google.com/file/d/1SdwjMqZb30aItOGoc0K3OEO73jXRm6Ho/view

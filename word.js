@@ -12,8 +12,13 @@ var word = function(randomWordArray){
     
     }
     console.log(this.currentWordArray.join(" ")) //Convert the word to guess from array to string
- 
+    
   }
+
+ 
+    
+      
+  
 
   this.eachLetterFunc = function(letter){
    
@@ -29,7 +34,23 @@ var word = function(randomWordArray){
     }
 
      console.log(this.currentWordArray.join(" "))
-  }
+     this.wonValidation = function() {
+     var count = 0
+     
+        for (let k = 0; k < this.currentWordArray.length; k++){
+        if (this.currentWordArray[k].letterIsGuessed === false) {
+          count++;
+        } 
+      }
+     
+        if (count === 0) {
+          console.log("You Won!")
+          return true;
+        }
+      }
+    }
 }
+
+
 
 module.exports = word;
