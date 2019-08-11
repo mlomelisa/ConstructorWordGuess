@@ -9,7 +9,7 @@ var guesstries = 10;
 var wordRandomFunc = function() {
   var randomWord = words[Math.floor(Math.random() * words.length)];
   randomWordArray  = randomWord.split(''); // convert to array the random word to guess
-  console.log(randomWord)
+  console.log(randomWordArray)
   this.testWord = new word(randomWordArray);
   
   testWord.convertstoString();
@@ -38,10 +38,6 @@ inquirer.prompt([
     if(randomWordArray.includes(newLetter)){
      
       testWord.eachLetterFunc(newLetter)
-     
-    // this.testWord = new word(randomWordArray);
-     testWord.convertstoString();
-    
       
     } else {
       guesstries--;

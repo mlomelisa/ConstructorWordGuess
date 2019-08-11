@@ -24,6 +24,4 @@ var letter = function(character) {
       }
   }
 
-
-
 module.exports = letter;
